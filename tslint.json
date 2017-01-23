@@ -20,9 +20,10 @@
     ],
     "interface-over-type-literal": true,
     "label-position": true,
+    "label-undefined": true,
     "max-line-length": [
       true,
-      140
+      240
     ],
     "member-access": false,
     "member-ordering": [

@@ -8,12 +8,13 @@ import { enableProdMode } from '@angular/core';
 // 环境（开发、生产）
 import { environment } from './environments/environment';
 // 根模块
-import { AppModule } from './app/app.module';
+import { AppModule } from './app/';
+//import { AppModule } from './app/app.module';
 
 // 判断是否为生产环境
 if (environment.production) {
   enableProdMode();
 }
 
-// 启动
+// 从一个指定的NgModule中使用根组件引导应用
 platformBrowserDynamic().bootstrapModule(AppModule).catch(err => console.error(err));
