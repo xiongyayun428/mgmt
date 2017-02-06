@@ -8,9 +8,9 @@ import { Component, OnInit, OnDestroy, Inject } from '@angular/core';
 })
 
 export class AppComponent implements OnInit, OnDestroy {
-  
+
   constructor(private logger: LoggerService) { }
-  
+
   // 初始化时检查是否登录？
   ngOnInit() {
     this.logger.info('app init');
@@ -18,6 +18,6 @@ export class AppComponent implements OnInit, OnDestroy {
 
   // 注销时处理
   ngOnDestroy() {
-    console.log("app destroy");
+    console.log('app destroy');
   }
 }
