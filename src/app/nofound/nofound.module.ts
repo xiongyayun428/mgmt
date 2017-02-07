@@ -2,14 +2,14 @@ import { NgModule } from "@angular/core";
 import { NofoundComponent } from "./nofound.component";
 import { RouterModule } from "@angular/router";
 import { CommonModule } from "@angular/common";
-import { AuthenticationGuardService } from '../core/authentication-guard.service'
+import { AuthGuardService } from '../auth/auth-guard.service';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forChild([
       {
-        path: '', component: NofoundComponent, canActivate: [AuthenticationGuardService]
+        path: '', component: NofoundComponent, canActivate: [AuthGuardService]
       }
     ])
   ],

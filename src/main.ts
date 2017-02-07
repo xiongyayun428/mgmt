@@ -9,7 +9,7 @@ import { enableProdMode } from '@angular/core';
 import { environment } from './environments/environment';
 // 根模块
 import { AppModule } from './app/';
-//import { AppModule } from './app/app.module';
+// import { AppModule } from './app/app.module';
 
 // 判断是否为生产环境
 if (environment.production) {

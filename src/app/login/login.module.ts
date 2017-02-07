@@ -5,15 +5,15 @@ import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login.component';
 
 import { UserService } from '../core/user.service';
-import { AuthenticationService } from '../core/authentication.service';
+import { AuthService } from '../auth/auth.service';
 
 @NgModule({
   // 需要引用的模块
   imports: [ CommonModule, FormsModule ],
   // 声明当前模块中使用的组件
   declarations: [ LoginComponent ],
-  providers: [ UserService, 
-    {provide: 'authenticationService', useClass: AuthenticationService}
+  providers: [ UserService,
+    {provide: 'authService', useClass: AuthService}
   ],
   // 导出公共部分提供其他模块使用
   exports: [ LoginComponent ]

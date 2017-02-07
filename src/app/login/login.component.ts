@@ -1,8 +1,9 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { Router } from "@angular/router";
+import { Router } from '@angular/router';
 
 import { UserService } from '../core/user.service';
 import { User } from '../domain/entities';
+import { AuthConfigConsts } from '../domain/entities';
 
 import { AuthenticationService } from '../core/authentication.service';
 
@@ -17,7 +18,7 @@ export class LoginComponent implements OnInit {
   constructor(
     private router: Router,
     private userService: UserService,
-    @Inject('authenticationService') private service
+    @Inject('authService') private service
   ) { }
 
   ngOnInit() {
@@ -28,7 +29,7 @@ export class LoginComponent implements OnInit {
    * 登录
    */
   login() {
-    this.service.isAuthenticated(this.model as User)
+    this.service.isAuthenticated(this.model.username, this.model.password)
       .then(auth => {
         if (auth.hasError) {
           this.error = auth.errMsg;
@@ -39,6 +40,14 @@ export class LoginComponent implements OnInit {
       .catch(err => {
         this.error = err;
       });
+  }
+
+  /**
+   * 登出
+   */
+  logout() {
+    // Remove token from localStorage
+    localStorage.removeItem(AuthConfigConsts.DEFAULT_TOKEN_NAME);
   }
 
 }

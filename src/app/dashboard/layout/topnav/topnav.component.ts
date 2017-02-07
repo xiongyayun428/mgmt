@@ -8,7 +8,7 @@ declare var $: any;
   styleUrls: ['./topnav.component.css']
 })
 export class TopnavComponent {
-  
+
   message: Array<any> = [];
   alter: Array<any> = [];
   main: Array<any> = [];
@@ -18,7 +18,7 @@ export class TopnavComponent {
     this.addAlert();
     this.addMain();
   }
-  
+
   addMessage() {
     this.message.push({
       image: 'http://i.huffpost.com/gadgets/slideshows/461162/slide_461162_6224974_sq50.jpg',
@@ -42,7 +42,7 @@ export class TopnavComponent {
       url: 'cccc',
     });
   }
-  
+
   addAlert() {
     this.alter.push({
       name: 'aaaaa',
@@ -60,7 +60,7 @@ export class TopnavComponent {
       url: 'cccc',
     });
   }
-  
+
   addMain() {
     this.main.push({
       name: 'Profile',
@@ -84,9 +84,9 @@ export class TopnavComponent {
     });
   }
 
-  
+
   changeTheme(color: string): void {
-    let link: any = $('<link>');
+    const link: any = $('<link>');
     link
       .appendTo('head')
       .attr({type : 'text/css', rel : 'stylesheet'})
@@ -94,13 +94,13 @@ export class TopnavComponent {
   }
 
   rtl(): void {
-    let body: any = $('body');
+    const body: any = $('body');
     body.toggleClass('rtl');
   }
 
   sidebarToggler(): void  {
-    let sidebar: any = $('#sidebar');
-    let mainContainer: any = $('.main-container');
+    const sidebar: any = $('#sidebar');
+    const mainContainer: any = $('.main-container');
     sidebar.toggleClass('sidebar-left-zero');
     mainContainer.toggleClass('main-container-ml-zero');
   }

@@ -17,7 +17,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { DashboardModule } from './dashboard/dashboard.module';
 
 import { LoggerService } from './core/logger.service';
-import { AuthenticationGuardService } from './core/authentication-guard.service'
+import { AuthGuardService } from './auth/auth-guard.service';
 import { NofoundComponent } from './nofound/nofound.component';
 
 
@@ -40,7 +40,7 @@ import { NofoundComponent } from './nofound/nofound.component';
   ],
   // 定义全局供应商
   providers: [
-    LoggerService, AuthenticationGuardService
+    LoggerService, AuthGuardService
     // 下面这种存在问题
 //    { provide: 'authentication', useClass: AuthenticationService },
 //    { provide: 'logger', useClass: LoggerService }

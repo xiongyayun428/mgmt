@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { User } from '../domain/entities';
-import { ReplaySubject } from 'rxjs'
+import { ReplaySubject } from 'rxjs';
 
 @Injectable()
 export class UserService {
-  
+
   private isAuthenticatedSubject = new ReplaySubject<boolean>(1);
   // 是否已经登录？
   public isAuthenticated = this.isAuthenticatedSubject.asObservable();
@@ -19,7 +19,7 @@ export class UserService {
   findUser(username: string): Promise<User> {
     return new Promise(function(resolve, reject) {
       if (username === 'admin') {
-        let user = new User();
+        const user = new User();
         user.id = 1000;
         user.username = 'admin';
         user.password = 'admin';

@@ -12,9 +12,9 @@ export class SidebarComponent implements OnInit {
   ngOnInit() {
     console.log('SidebarComponent init');
   }
-  
+
   isActive = false;
-  showMenu: string = '';
+  private showMenu: string = '';
   eventCalled() {
     this.isActive = !this.isActive;
   }

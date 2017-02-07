@@ -22,9 +22,9 @@ export class AuthenticationService {
     return this.userService
       .findUser(model.username)
       .then(user => {
-        let auth = new Auth();
+        const auth = new Auth();
         localStorage.removeItem('userId');
-        let redirectUrl = (localStorage.getItem('redirectUrl') === null) ? '/dashboard/home' : localStorage.getItem('redirectUrl');
+        const redirectUrl = (localStorage.getItem('redirectUrl') === null) ? '/dashboard/home' : localStorage.getItem('redirectUrl');
         auth.redirectUrl = redirectUrl;
         console.log('url: ' + redirectUrl);
         if (null === user) {

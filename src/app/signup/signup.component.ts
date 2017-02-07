@@ -9,7 +9,7 @@ export class SignupComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log("signup");
+    console.log('signup');
   }
 
 }
