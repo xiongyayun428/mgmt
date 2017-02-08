@@ -8,17 +8,18 @@ import { AppComponent } from './app.component';
 import { routes } from './app.routes';
 
 import { LoginModule } from './login/login.module';
-import { LoginComponent } from './login/login.component';
+// import { LoginComponent } from './login/login.component';
 
 import { SignupModule } from './signup/signup.module';
-import { SignupComponent } from './signup/signup.component';
+// import { SignupComponent } from './signup/signup.component';
 
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { NofoundModule } from './nofound/nofound.module';
+
 import { DashboardModule } from './dashboard/dashboard.module';
+// import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { LoggerService } from './core/logger.service';
 import { AuthGuardService } from './auth/auth-guard.service';
-import { NofoundComponent } from './nofound/nofound.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { NofoundComponent } from './nofound/nofound.component';
     // 注册模块
     LoginModule,
     SignupModule,
+    NofoundModule,
     DashboardModule
   ],
   // 声明当前模块中使用的组件

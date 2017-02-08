@@ -2,7 +2,7 @@ import { ModuleWithProviders, NgModule, Optional, SkipSelf } from '@angular/core
 import { CommonModule } from '@angular/common';
 import { AuthenticationService } from './authentication.service';
 import { UserService } from './user.service';
-import { AuthenticationGuardService } from './authentication-guard.service';
+import { AuthGuardService } from '../auth/auth-guard.service';
 
 /**
  * 只在应用启动时导入它一次，而不会在其它地方导入它
@@ -15,7 +15,7 @@ import { AuthenticationGuardService } from './authentication-guard.service';
   providers: [
     { provide: 'auth', useClass: AuthenticationService },
     { provide: 'user', useClass: UserService },
-    AuthenticationGuardService
+    AuthGuardService
     ]
 })
 export class CoreModule {
