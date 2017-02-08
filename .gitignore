@@ -38,3 +38,9 @@ testem.log
 #System Files
 .DS_Store
 Thumbs.db
+
+# AOT
+/aot
+*.ngsummary.json
+*.ngfactory.ts
+*.shim.ngstyle.ts
