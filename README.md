@@ -1,6 +1,6 @@
 # Mgmt
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.25.5.
+This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.30.
 
 ## AOT
 Run `npm run ngcStart` to build the project
