@@ -26,7 +26,7 @@ export class AuthService {
         return null;
     }
 
-    private setUser(authResult): void {
+    private setUser(authResult: any): void {
         // localStorage.setItem('access_token', authResult.accessToken);
         localStorage.setItem(AuthConfigConsts.DEFAULT_TOKEN_NAME, authResult.idToken);
     }

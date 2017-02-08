@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
   constructor(
     private router: Router,
     private userService: UserService,
-    @Inject('authService') private service
+    @Inject('authService') private service: any
   ) { }
 
   ngOnInit() {
@@ -29,17 +29,17 @@ export class LoginComponent implements OnInit {
    * 登录
    */
   login() {
-    this.service.isAuthenticated(this.model.username, this.model.password)
-      .then(auth => {
-        if (auth.hasError) {
-          this.error = auth.errMsg;
-        } else {
-          this.router.navigate([ auth.redirectUrl ]);
-        }
-      })
-      .catch(err => {
-        this.error = err;
-      });
+    // this.service.isAuthenticated(this.model.username, this.model.password)
+    //   .then(auth => {
+    //     if (auth.hasError) {
+    //       this.error = auth.errMsg;
+    //     } else {
+    //       this.router.navigate([ auth.redirectUrl ]);
+    //     }
+    //   })
+    //   .catch(err => {
+    //     this.error = err;
+    //   });
   }
 
   /**
